@@ -1,0 +1,221 @@
+/* responsive.css */
+
+/**@media only screen and (max-width: 598px) {
+    .h-icons {
+        display: block;
+    }
+
+    /* Modify logo font size for mobile */
+    /*.logo {
+        font-size: 20px;
+    }
+}
+
+/* for Android, Iphone */
+@media only screen and (min-width: 599px) and (max-width: 1220px) {
+    :root {
+        --big-font: 3.2rem;
+        --h2-font: 2rem;
+        --p-font: 1rem;
+        transition: .2s;
+    }
+    
+    section {
+        padding-left: 85px;
+        padding-right: 85px;
+    }
+   
+    header { 
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        background-color: transparent;
+        padding: 33px 3%;
+    }
+   
+    header.sticky {
+      padding: 18px 9%;
+      background: var(--bg-color);
+      box-shadow: 0px 4px 15px rgb(0 0 0 / 8%);
+    }
+   
+    .kohaku-logo {
+        font-size: 40px;
+    }
+
+    .navbar {
+        margin-top: -33px;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 250px;
+        height: 110vh;
+        background: #1C1C1C;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        padding: 180px 40px;
+        transition: all .38s ease;
+        z-index: -999;
+    }
+  
+    .navbar a {
+        display: block;
+        margin: 1.6rem 0;
+        font-size: 25px;
+
+    }
+  
+    .navbar.open {
+        right: 0;
+    }
+   
+    .h-icons i {
+      font-size: 36px;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 36px;
+        margin-left:7px;
+    }
+  
+    .home {
+        margin-top: 50px;
+        height: 34vh;
+    }
+
+    .btn-bk {
+        font-size: 24px;
+    }
+
+    .home .home-row .home-txt p {
+        font-size: 23px;
+    }
+
+    .menu-content {
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        margin-left: 27px;
+        gap: 2.7rem;
+    }
+
+    .menu-title h2 {
+        font-size: 23px;
+    }
+
+    .menu-title p {
+        font-size: 10px;
+    }
+  
+    .menu-desc h4 {
+        font-size: 20px;
+    }
+  
+    .menu-row p {
+      font-size: 10px;
+    }
+
+    .menu-row img {
+        width: 330px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .star i {
+        font-size: 23px;
+    }
+  
+    .about-txt p {
+        font-size: 0.6rem;
+    }
+
+    .mn-desc h2 {
+        font-size: 20px;
+    }
+    
+    .mn-desc p {
+        font-size: 10px;
+        margin-bottom: 3rem;
+    }
+
+    #slides .slide .slide-content h1 {
+        font-size: var(--big-font);
+    }
+    
+    #slides .slide .slide-content p {
+        font-size: var(--p-font);
+    }
+    
+    #slides .slide .slide-content h4 {
+        color: var(--text-color);
+    }
+
+    .slide-content img {
+        width: 370px;
+    }
+
+    #slides .inner {
+        height: auto;
+    }
+
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1) {
+        display: none;
+    }
+
+    #slide1:checked ~ #controls label:nth-last-child(1),
+    #slide2:checked ~ #controls label:nth-last-child(4),
+    #slide3:checked ~ #controls label:nth-last-child(3),
+    #slide4:checked ~ #controls label:nth-last-child(2) {
+        display: none;
+    }
+    #bullets {
+        margin: 130px 0 0;
+        text-align: center;
+    }  
+  
+    .main-text p {
+        font-size: 13px;
+    }
+
+    .main-contact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+        gap: 4rem;
+    }
+  
+    .contact-content h4 {
+        font-size: 15px;
+    }
+   
+    .contact-content li a {
+        font-size: 9px;
+    } 
+   
+    .scroll-top {
+        bottom: 4rem;
+        right: 3rem;
+    }
+
+    .scroll-top i {
+        padding: 8px;
+        font-size: 2.8rem;
+        border-radius: 5rem;
+    }
+   
+    .last-text p {
+      font-size: 20px;
+      height: 7vh;
+    }
+}
+
+/* Larger screens */
+/* @media only screen and (min-width: 1025px) {
+    /* Adjust container section styles for larger screens */
+/*     .container-box {
+        grid-template-columns: repeat(4, 1fr);
+    }
+} */

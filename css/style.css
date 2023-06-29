@@ -1,0 +1,650 @@
+/** CSS Clearfix
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+ .cf:before,
+ .cf:after {
+     content: " "; /* 1 */
+     display: table; /* 2 */
+ }
+ 
+ .cf:after {
+     clear: both;
+ }
+ 
+ /**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+ .cf {
+     zoom: 1;
+ }
+
+/* CSS RESET
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Style */
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --text-color: #CAA676;
+    --main-color: #A22B22;
+    --bg-color: #1C1C1C;
+    --big-font: 5.5rem;
+    --h2-font: 2.3rem;
+    --p-font: 1.3rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* style header */
+header { 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 10px 15%;
+    transition: all .38s ease;
+}
+
+header.sticky {
+    padding: 15px 15%;
+    background: var(--bg-color);
+    box-shadow: 0px 4px 15px rgb(0 0 0 / 8%);
+}
+
+.kohaku-logo .ramen-icon {
+    width: 70px;
+    float: left;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+
+.txt-logo {
+    padding-top: 25px;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.txt-logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    margin-top: 28px;
+    margin-left: 127px;
+    justify-content: center;
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 2px 25px;
+    border-bottom: 2px solid transparent;
+    transition: all .38s ease;
+}
+
+.navbar a:hover {
+    border-bottom: 2px solid var(--main-color);
+    color: var(--main-color);
+}
+
+.h-icons {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    padding: 10px 22px; 
+    background-color: var(--main-color);
+    border-radius: 5rem;
+}
+
+.h-icons i {
+    font-size: 23px;
+    color: var(--text-color);
+    margin-right: 15px;
+    margin-left: 8px;
+}
+
+#menu-icon {
+    font-size: 32px;
+    color: var(--text-color);
+    z-index: 1001;
+    cursor: pointer;
+    display: none   ;
+}
+/* style header stop here */
+
+/* style home */
+section {
+    padding: 90px 15% 80px;
+}
+
+.home {
+    margin-top: 23px;
+    height: 93vh;
+    width: 100%;
+    align-items: center;
+}
+
+.home-row {
+    margin-top: 90px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-txt h1 {
+    font-size: var(--big-font);
+    line-height: 1.2;
+    margin-top: 2rem;
+    margin-bottom: 1.1rem;
+}
+
+.home-txt .home-desc {
+    font-size: var(--p-font);
+    line-height: 30px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 2.3rem;
+}
+
+.home-txt .home-address {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4rem;
+}
+
+.home-img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 110px;
+    margin-left: 50px;
+}
+
+.btn-bk {
+    display: inline-block;
+    padding: 14px 26px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5rem;
+    transition: all .38s ease;
+    cursor: pointer;
+}
+
+.btn-bk:hover {
+    letter-spacing: 2px;
+}
+
+.sk-top {
+    margin-top: 45px;
+    float: right;
+}
+
+.sk-bottom {
+    margin-top: 160px;
+}
+/* style home end here */
+
+/* style menu */
+.menu {
+    padding-top: 130px;
+}
+.menu-title {
+    justify-content: center;
+    text-align: center;
+}
+.menu-title h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+}
+
+.menu-title p {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 32px;
+}
+
+.menu-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+    cursor: pointer;
+}
+
+.menu-row {
+    transition: all .38s ease;
+}
+
+.menu-row img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-desc {
+    align-items: center;
+    justify-content: left;
+    padding: 15px 0px;
+}
+
+.menu-desc p {
+    margin-top: 15px;
+}
+
+.menu-name h4 {
+    margin-bottom: 1rem;;
+    font-size: 28px;
+}
+
+.menu-price h4 {
+    color: var(--text-color);
+    font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.menu-row p {
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+
+.star i {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+.menu-row:hover {
+    transform: scale(1.05);
+}
+/* menu style end here */
+
+/* about style */
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-img img{
+    width: 100%;
+    height: auto;
+    margin-left: -35px;
+}
+
+.about-txt h1 {
+    font-size: var(--big-font);
+    line-height: 1.2;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.about-txt p {
+    font-size: var(--p-font);
+    line-height: 30px;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+/* about style end here */
+
+/* menu slide style */
+#slider {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+}
+
+#slider input[type=radio] {
+    display: none;
+}
+
+#slider label {
+    cursor:pointer;
+    text-decoration: none;
+}
+
+#slides {
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+ 
+#slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    height: 570px;
+}
+
+#slides .slide {
+    width: 25%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+ /* content inside of the slide style */
+.menu-slider {
+    margin-bottom: 2rem;
+ }
+
+.menu-slider .mn-desc {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.mn-desc h2 {
+    color: var(--text-color);
+    font-size: var(--h2-font);
+    margin-bottom: 10px;
+}
+
+.mn-desc p {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 500;
+}
+
+#slides .slide .slide-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+    margin-left: 53px;
+}
+
+#slides .slide .slide-content h1 {
+    font-size: var(--big-font);
+    color: var(--text-color);
+    letter-spacing: 3px;
+    margin-bottom: 1.7rem;
+}
+
+#slides .slide .slide-content p {
+    font-size: var(--p-font);
+    color: var(--text-color);
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 2.7rem;
+}
+
+#slides .slide .slide-content h4 {
+    color: var(--text-color);
+    font-size: 25px;
+}
+
+#slides .slide .slide-content span {
+    display: inline-block;
+    padding: 8px 15px;
+    background: var(--main-color);
+    color: var(--text-color);
+    margin-left: 5px;
+    font-size: 25px;
+    border-radius: 1.5rem;
+}
+
+.slide-content .slide-img-right img {
+    margin-left: 40px;
+}
+
+#slides .slide_1 {
+    background: transparent;
+}
+
+#slides .slide_2 {
+    background: transparent;
+}
+
+#slides .slide_3 {
+    background: transparent;
+}
+ 
+#slides .slide_4 {
+    background: transparent;
+}
+
+#controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+ 
+#controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+}
+#controls label:hover {
+    opacity: 1;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+    background-image: url(img/arrow/right.png);
+    background-repeat: no-repeat;
+    float:right;
+    margin-top: -150px;
+    margin-right: -90px;
+    display: block;
+}
+
+#slide1:checked ~ #controls label:nth-last-child(1),
+#slide2:checked ~ #controls label:nth-last-child(4),
+#slide3:checked ~ #controls label:nth-last-child(3),
+#slide4:checked ~ #controls label:nth-last-child(2) {
+    background-image: url(img/arrow/left.png);
+    background-repeat: no-repeat;
+    float:left;
+    margin-top: -150px;
+    margin-left: -80px;
+    display: block;
+}
+#bullets {
+    margin: 150px 0 0;
+    text-align: center;
+}       
+#bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #CAA676;
+    margin: 0 10px;
+}
+ 
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+    background: var(--main-color);
+}
+
+@media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+/* menu slide end here */
+
+ /* contact style */
+.contact {
+    padding: 50px 15% 40px;
+}
+
+.main-contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+}
+
+.contact-content h4 {
+    font-size: 27px;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-content li {
+    margin-bottom: 16px;
+}
+
+.contact-content li a {
+    display: block;
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    transition: all .38s ease;
+} 
+
+.contact-content li a:hover {
+    transform: translateX(10px);
+    color: var(--main-color);
+}
+/* contact style end here*/
+
+/* footer style */
+.last-text p {
+    text-align: center;
+    padding: 25px;
+    color: var(--text-color);
+    font-size: 15px;
+    letter-spacing: 1px;
+    height: 10vh;
+}
+
+.scroll-top {
+    position: fixed;
+    bottom: 3.2rem;
+    right: 4.7rem;
+}
+
+.scroll-top i {
+    padding: 8px;
+    font-size: 1.8rem;
+    color: #CAA676;
+    background: var(--main-color);
+    border-radius: 5rem;
+}
