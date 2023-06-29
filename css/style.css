@@ -192,7 +192,6 @@ section {
 }
 
 .home {
-    margin-top: 23px;
     height: 93vh;
     width: 100%;
     align-items: center;
@@ -363,8 +362,8 @@ section {
 
 .about-txt p {
     font-size: var(--p-font);
-    line-height: 30px;
     color: var(--text-color);
+    line-height: 30px;
     font-weight: 500;
     margin-bottom: 3rem;
 }

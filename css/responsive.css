@@ -30,7 +30,7 @@
         width: 100%;
         z-index: 1000;
         background-color: transparent;
-        padding: 33px 3%;
+        padding: 18px 3%;
     }
    
     header.sticky {
@@ -82,8 +82,15 @@
     }
   
     .home {
-        margin-top: 50px;
         height: 34vh;
+    }
+  
+    .home-img img {
+        margin-bottom: 150px;
+    }
+  
+    .sk-top {
+      margin-top: 65px;
     }
 
     .btn-bk {
@@ -101,19 +108,19 @@
     }
 
     .menu-title h2 {
-        font-size: 23px;
+        font-size: 15px;
     }
 
     .menu-title p {
-        font-size: 10px;
+        font-size: 9px;
     }
   
     .menu-desc h4 {
-        font-size: 20px;
+        font-size: 13px;
     }
   
     .menu-row p {
-      font-size: 10px;
+      font-size: 9px;
     }
 
     .menu-row img {
@@ -126,16 +133,21 @@
         font-size: 23px;
     }
   
+    .about-txt h1 {
+        font-size: 20px;
+    }
+      
     .about-txt p {
-        font-size: 0.6rem;
+        font-size: 8px;
+        line-height: 10px;
     }
 
     .mn-desc h2 {
-        font-size: 20px;
+        font-size: 15px;
     }
     
     .mn-desc p {
-        font-size: 10px;
+        font-size: 9px;
         margin-bottom: 3rem;
     }
 
@@ -144,7 +156,7 @@
     }
     
     #slides .slide .slide-content p {
-        font-size: var(--p-font);
+        font-size: 20px;
     }
     
     #slides .slide .slide-content h4 {
@@ -172,6 +184,7 @@
     #slide4:checked ~ #controls label:nth-last-child(2) {
         display: none;
     }
+  
     #bullets {
         margin: 130px 0 0;
         text-align: center;
@@ -182,13 +195,11 @@
     }
 
     .main-contact {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-        gap: 4rem;
+        gap: 2.7rem;
     }
   
     .contact-content h4 {
-        font-size: 15px;
+        font-size: 13px;
     }
    
     .contact-content li a {
