@@ -596,8 +596,8 @@ section {
 
 .main-contact {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    gap: 2rem;
 }
 
 .contact-content h4 {
